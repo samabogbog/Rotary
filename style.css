@@ -7,8 +7,10 @@ body {
 }
 .main {
     display: flex;
+    flex-wrap: wrap;
     width: 100%;
     max-width: 960px;
+    min-width: 480px;
     margin: auto;
 }
 .col-2 {
@@ -217,8 +219,8 @@ body {
     box-shadow: 0 1px 4px rgba(0, 0, 0, 0.25);
 }
 .foot {
-    position: absolute;
     display: block;
+    position: fixed;
     margin: auto;
     width: 100%;
     background: #9ac;
@@ -229,6 +231,7 @@ body {
     font-size: 0.9em;
     font-weight: 400;
     bottom: 0;
+    z-index: 9;
 }
 .foot a {
     color: #fff;
@@ -273,4 +276,11 @@ body {
         opacity: 0;
         top: -30px;
     }
+}
+@media screen and (max-width: 680px) {
+.col-2 {
+width: 100%;
+padding: 10px;
+box-sizing: border-box;
+}
 }
