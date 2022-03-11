@@ -217,6 +217,7 @@ body {
     box-shadow: 0 1px 4px rgba(0, 0, 0, 0.25);
 }
 .foot {
+    position: absolute;
     display: block;
     margin: auto;
     width: 100%;
@@ -227,6 +228,7 @@ body {
     text-transform: uppercase;
     font-size: 0.9em;
     font-weight: 400;
+    bottom: 0;
 }
 .foot a {
     color: #fff;
