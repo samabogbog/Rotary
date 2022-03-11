@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link type="text/css" rel="stylesheet" href="style.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@200;300;400;500;600;700;800&family=Outfit:wght@200;300;400;500;600;700&display=swap" rel="stylesheet" type="text/css">
+    <title>Rotary Calculator</title>
+</head>
+<body>
+    <div class="main">
+        <!-- 2 way -->
+        <div class="col-2">
+            <div class="frame">
+                <div class="title">TOP & BOTTOM</div>
+                <!-- Enter roll and angle -->
+                <div class="container">
+        
+                    <div class="baseBox">
+                        <div class="gridRoll">
+                            <div class="rollSub">Roll (Value)</div>
+                            <div class="rContent">
+                                <input id="roll_input" type="number" max="2000" min="1" value="0" step="1" oninput="calc2()"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="baseBox">
+                        <div class="gridCount">
+                            <div class="angleSub">Angle (Count)</div>
+                            <div class="rContent">
+                                <input id="angle2_input" type="number" max="100" min="-100" value="0" step="1" oninput="calc2()"/>
+                            </div>
+                        </div>
+                        <div class="gridCount">
+                            <div class="stepSub">Step (Count)</div>
+                            <div class="rContent">
+                                <input id="step_input" type="number" max="100" min="1" value="1" step="1" oninput="calc2()"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        
+                <!-- Line -->
+                <div class="line-md"></div>
+        
+                <!-- Enter Horizontal value -->
+                <div class="container">
+                    <div class="grid">
+                        <div class="hSub">Horizontal X</div>
+                        <div class="hContent">
+                            <input id="hx2_input" type="number" max="100" min="-100" value="0.00" step="0.1" oninput="calc2()"/>
+                        </div>
+                    </div>
+                    <div class="grid">
+                        <div class="hSub">Horizontal Y</div>
+                        <div class="hContent">
+                            <input id="hy2_input" type="number" max="100" min="-100" value="0.00" step="0.1" oninput="calc2()"/>
+                        </div>
+                    </div>
+                    
+                    <!-- Result Vertical value -->
+                    <div class="grid">
+                        <div class="vSub">Vertical X</div>
+                        <div class="vContent">
+                            <p id="vx_result">0</p>
+                        </div>
+                    </div>
+                    <div class="grid">
+                        <div class="vSub">Vertical Y</div>
+                        <div class="vContent">
+                            <p id="vy_result">0</p>
+                        </div>
+                    </div>
+                    <div class="copy">
+                        <button class="btn" onclick="copyVX2(); anim2()">COPY</button>
+                    </div>
+                    <div class="copy">
+                        <button class="btn" onclick="copyVY2(); anim2()">COPY</button>
+                    </div>
+                </div>
+                <div class="notif" id="notif">Copied!</div>
+            </div>
+            
+        </div>
+
+        <!-- 4 way -->
+        <div class="col-2">
+            <div class="frame">
+                <div class="title">AROUND</div>
+                <!-- Enter roll and angle -->
+                <div class="container">
+        
+                    <div class="baseBox">
+                        <div class="gridRoll-4">
+                            <div class="rollSub">Width</div>
+                            <div class="rContent">
+                                <input id="width_input" type="number" max="2000" min="1" value="100" step="1" oninput="calc4()"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="baseBox">
+                        <div class="gridRoll-4">
+                            <div class="rollSub">Height</div>
+                            <div class="rContent">
+                                <input id="height_input" type="number" max="2000" min="1" value="100" step="1" oninput="calc4()"/>
+                            </div>
+                        </div>
+                    </div>
+        
+                    <div class="baseBox">
+                        <div class="gridCount">
+                            <div class="stepSub">Step H</div>
+                            <div class="rContent">
+                                <input id="stepH_input" type="number" max="100" min="1" value="2" step="1" oninput="calc4()"/>
+                            </div>
+                        </div>
+                        <div class="gridCount">
+                            <div class="angleSub">Angle</div>
+                            <div class="rContent">
+                                <input id="angle4_input" type="number" max="20" min="-20" value="0" step="1" oninput="calc4()"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="baseBox">
+                        <div class="gridCount">
+                            <div class="stepSub">Step V</div>
+                            <div class="rContent">
+                                <input id="stepV_input" type="number" max="100" min="1" value="2" step="1" oninput="calc4()"/>
+                            </div>
+                        </div>
+                        <div class="gridCount">
+                            <div class="stepSub">Unit</div>
+                            <div class="rContent">
+                                <input id="unit_input" type="number" max="10" min="1" value="1" step="1" oninput="calc4()"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        
+                <!-- Line -->
+                <div class="line-sm"></div>
+        
+                <div class="container">
+                    <!-- Result Horizontal -->
+                    <div class="grid">
+                        <div class="hSub">Horizontal X</div>
+                        <div class="hContent">
+                            <p id="hx4_result">0</p>
+                        </div>
+                    </div>
+                    <div class="grid">
+                        <div class="hSub">Horizontal Y</div>
+                        <div class="hContent">
+                            <p id="hy4_result">0</p>
+                        </div>
+                    </div>
+                    <div class="copy">
+                        <button class="btn" onclick="copyHX(); anim4()">COPY</button>
+                    </div>
+                    <div class="copy">
+                        <button class="btn" onclick="copyHY(); anim4()">COPY</button>
+                    </div>
+                    
+                    <!-- Result Vertical -->
+                    <div class="grid">
+                        <div class="vSub">Vertical X</div>
+                        <div class="vContent">
+                            <p id="vx4_result">0</p>
+                        </div>
+                    </div>
+                    <div class="grid">
+                        <div class="vSub">Vertical Y</div>
+                        <div class="vContent">
+                            <p id="vy4_result">0</p>
+                        </div>
+                    </div>
+                    <div class="copy">
+                        <button class="btn" onclick="copyVX(); anim4()">COPY</button>
+                    </div>
+                    <div class="copy">
+                        <button class="btn" onclick="copyVY(); anim4()">COPY</button>
+                    </div>
+                </div>
+                <div class="notif" id="notif">Copied!</div>
+            </div>
+            
+        </div>
+    </div>
+    <div class="foot" id="year">© Coryright </div>
+    <script type="text/javascript" src="main.js"></script>
+</body>
+</html>

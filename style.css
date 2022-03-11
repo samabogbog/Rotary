@@ -1,0 +1,274 @@
+body {
+    font-family: 'Outfit';
+    padding: 0;
+    margin: 0;
+    font-weight: 500;
+    background: #f0f2f4;
+}
+.main {
+    display: flex;
+    width: 100%;
+    max-width: 960px;
+    margin: auto;
+}
+.col-2 {
+    width: 50%;
+    padding: 10px;
+    box-sizing: border-box;
+}
+.line-sm {
+    display: block;
+    position: relative;
+    width: 75%;
+    height: 0px;
+    margin: 5px auto;
+    border-top: 2px dashed rgba(151, 91, 91, 0.2);
+}
+.line-md {
+    display: block;
+    position: relative;
+    width: 75%;
+    height: 0px;
+    margin: 8px auto;
+    border-top: 2px dashed rgba(151, 91, 91, 0.2);
+}
+.frame {
+    width: 320px;
+    margin: auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    padding: 0 10px 10px 10px;
+    background: #FFF;
+    color: rgba(0, 0, 0, 0.5);
+    text-align: center;
+    border-radius: 7px;
+    box-shadow: 0 1px 10px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+}
+.title {
+    display: block;
+    position: relative;
+    width: 60%;
+    margin: auto;
+    margin-bottom: 10px;
+    font-size: 1.3em;
+    font-weight: 600;
+    color: #fff;
+    border-radius: 0 0 10px 10px;
+    padding: 8px 5px;
+    background: #5d9;
+    box-shadow: 0 1px 7px rgba(0, 0, 0, 0.1);
+}
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 0;
+}
+.baseBox {
+    display: block;
+    position: relative;
+    width: 50%;
+    overflow: hidden;
+}
+.grid {
+    display: block;
+    position: relative;
+    width: calc(50% - 20px);
+    height: 60px;
+    background: #fff;
+    margin: 10px;
+    border-radius: 6px;
+    box-shadow: 0 1px 7px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+.gridCount {
+    display: block;
+    position: relative;
+    width: calc(100% - 20px);
+    height: 55px;
+    background: #fff;
+    margin: 10px;
+    border-radius: 6px;
+    box-shadow: 0 1px 7px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+.gridRoll, .gridRoll-4 {
+    display: block;
+    position: relative;
+    width: calc(100% - 20px);
+    background: #fff;
+    border-radius: 6px;
+    box-shadow: 0 1px 7px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+.gridRoll {
+    height: 120px;
+    margin: 10px;
+}
+.gridRoll-4 {
+    height: 60px;
+    margin: 0px 10px 5px;
+}
+.hSub, .vSub {
+    display: flex;
+    position: relative;
+    width: 100%;
+    height: 50%;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-size: 1.1em;
+}
+.hSub {
+    background: #c8f;
+}
+.vSub {
+    background: #fa6;
+}
+.rollSub, .angleSub, .stepSub {
+    display: flex;
+    position: relative;
+    width: 100%;
+    height: 45%;
+    justify-content: center;
+    align-items: center;
+    background: #5cf;
+    color: #fff;
+    font-size: 1.1em;
+}
+.rollSub {
+    background: #68f;
+}
+#roll_input, #angle_input, #step_input{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+    text-align: center;
+    font-family: 'Outfit';
+    font-weight: 600;
+    font-size: 1em;
+    color: rgba(0, 0, 0, 0.6);
+}
+#width_input, #height_input, #angle2_input, #angle4_input, #stepH_input, #stepV_input, #unit_input{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+    text-align: center;
+    font-family: 'Outfit';
+    font-weight: 600;
+    font-size: 1em;
+    color: rgba(0, 0, 0, 0.6);
+}
+.hContent, .vContent, .rContent {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 50%;
+}
+#hx2_input, #hy2_input{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+    text-align: center;
+    font-family: 'Outfit';
+    font-weight: 500;
+    font-size: 1em;
+    color: rgba(0, 0, 0, 0.6);
+}
+#vx_result, #vy_result, #vx4_result, #vy4_result, #hx4_result, #hy4_result {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    font-family: 'Outfit';
+    font-weight: 600;
+    font-size: 1em;
+    line-height: 0em;
+    color: rgba(0, 190, 0, 0.9);
+}
+.copy {
+    display: block;
+    width: 50%;
+}
+.btn {
+    display: block;
+    width: 60px;
+    margin: 5px auto;
+    padding: 5px 6px;
+    background: #789;
+    color: rgba(255, 255, 255, 0.9);
+    border: 0;
+    outline: none;
+    font-family: 'Outfit';
+    font-weight: 500;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: .15s;
+}
+.btn:hover {
+    background: #678;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.25);
+}
+.foot {
+    display: block;
+    margin: auto;
+    width: 100%;
+    background: #9ac;
+    text-align: center;
+    color: #fff;
+    padding: 10px 0;
+    text-transform: uppercase;
+    font-size: 0.9em;
+    font-weight: 400;
+}
+.foot a {
+    color: #fff;
+}
+#notif {
+    display: inline-flex;
+    position: relative;
+    margin: auto;
+    top: 5px;
+    padding: 4px 10px;
+    background: #fff;
+    border-radius: 4px;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.15);
+    opacity: 0;
+}
+.animClass {
+    animation: anim 1s ease-in-out;
+}
+@keyframes anim {
+    0%{
+        opacity: 0;
+        top: 5px;
+    }7%{
+        opacity: 0.75;
+        top: -8px;
+    }19%{
+        opacity: 0.75;
+        top: -2px;
+    }21%{
+        opacity: 0.75;
+        top: -4px;
+    }84%{
+        opacity: 0.75;
+        top: -4px;
+    }87%{
+        opacity: 0.75;
+        top: -5px;
+    }95%{
+        opacity: 0.75;
+        top: 5px;
+    }100%{
+        opacity: 0;
+        top: -30px;
+    }
+}
