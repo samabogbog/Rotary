@@ -224,7 +224,8 @@ body {
     position: fixed;
     margin: auto;
     width: 100%;
-    background: #9ac;
+    background: rgba(0,10,50,0.33);
+    backdrop-filter: blur(3px);
     text-align: center;
     color: #fff;
     padding: 10px 0;
