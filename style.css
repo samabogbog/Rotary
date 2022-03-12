@@ -202,7 +202,8 @@ body {
 .btn {
     display: block;
     width: 60px;
-    margin: 5px auto;
+    margin: auto;
+    margin-bottom: 5px;
     padding: 5px 6px;
     background: #789;
     color: rgba(255, 255, 255, 0.9);
