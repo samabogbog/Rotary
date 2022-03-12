@@ -5,7 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link type="text/css" rel="stylesheet" href="style.css"/>
-    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@200;300;400;500;600;700;800&family=Outfit:wght@200;300;400;500;600;700&display=swap" rel="stylesheet" type="text/css">
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet"/>
     <link rel=icon type=image/x-icon href=/assets/favicon.ico/>
     <title>Rotary Calculator</title>
 </head>
@@ -15,6 +17,13 @@
         <div class="col-2">
             <div class="frame">
                 <div class="title">TOP & BOTTOM</div>
+
+                <div id="preview_box">
+                    <div class="row-box">
+                        <div class="simple-text">LOREM<br>IPSUM</div>
+                    </div>
+                </div>
+
                 <!-- Enter roll and angle -->
                 <div class="container">
         
@@ -22,7 +31,7 @@
                         <div class="gridRoll">
                             <div class="rollSub">Roll (Value)</div>
                             <div class="rContent">
-                                <input id="roll_input" type="number" max="2000" min="1" value="0" step="1" oninput="calc2()"/>
+                                <input id="roll_input" type="number" max="2000" min="1" value="0" step="1" oninput="calc2(); preview()"/>
                             </div>
                         </div>
                     </div>
@@ -30,13 +39,13 @@
                         <div class="gridCount">
                             <div class="angleSub">Angle (Count)</div>
                             <div class="rContent">
-                                <input id="angle2_input" type="number" max="100" min="-100" value="0" step="1" oninput="calc2()"/>
+                                <input id="angle2_input" type="number" max="100" min="-100" value="0" step="1" oninput="calc2(); preview()"/>
                             </div>
                         </div>
                         <div class="gridCount">
                             <div class="stepSub">Step (Count)</div>
                             <div class="rContent">
-                                <input id="step_input" type="number" max="100" min="1" value="1" step="1" oninput="calc2()"/>
+                                <input id="step_input" type="number" max="100" min="1" value="1" step="1" oninput="calc2(); preview()"/>
                             </div>
                         </div>
                     </div>
@@ -50,13 +59,13 @@
                     <div class="grid">
                         <div class="hSub">Horizontal X</div>
                         <div class="hContent">
-                            <input id="hx2_input" type="number" max="100" min="-100" value="0.00" step="0.1" oninput="calc2()"/>
+                            <input id="hx2_input" type="number" max="100" min="-100" value="0.00" step="0.1" oninput="calc2(); preview()"/>
                         </div>
                     </div>
                     <div class="grid">
                         <div class="hSub">Horizontal Y</div>
                         <div class="hContent">
-                            <input id="hy2_input" type="number" max="100" min="-100" value="0.00" step="0.1" oninput="calc2()"/>
+                            <input id="hy2_input" type="number" max="100" min="-100" value="0.00" step="0.1" oninput="calc2(); preview()"/>
                         </div>
                     </div>
                     

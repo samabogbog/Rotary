@@ -1,12 +1,15 @@
 document.getElementById('year').innerHTML = "Copyright © " + new Date().getFullYear() + " | <a>Ninjama</a>"
+var step;
+var HX2;
+var HY2;
 
 function calc2() {
     // Base value
     var roll = document.getElementById("roll_input").value
     var angle2 = document.getElementById("angle2_input").value
-    var step = document.getElementById("step_input").value
-    var HX2 = document.getElementById("hx2_input").value
-    var HY2 = document.getElementById("hy2_input").value
+    HX2 = document.getElementById("hx2_input").value
+    HY2 = document.getElementById("hy2_input").value
+    step = document.getElementById("step_input").value
     // calc VX
     if (angle2 == 0){
         var stp_ang = 0
@@ -27,6 +30,9 @@ function calc2() {
         var vyResult = vy_raw + vy_cps
         document.getElementById("vy_result").innerText = vyResult.toFixed(6)
     }
+    return step;
+    return HX2;
+    return HY2;
 }
 
 function calc4() {
@@ -118,6 +124,50 @@ function copyHY() {
 }
 
 
+            
+function preview() {
+    var preview_box = document.getElementById("preview_box");
+    var rowBox = document.getElementsByClassName('row-box');
+    var simpleText = document.getElementsByClassName('simple-text');
+    var vx_result = document.getElementById('vx_result').innerText
+    var vy_result = document.getElementById('vy_result').innerText
+    var preview_box_width = document.getElementById('preview_box').offsetWidth;
+    var preview_box_height = document.getElementById('preview_box').offsetHeight;
+
+    
+    preview_box.innerHTML = '<div class="row-box"></div>';
+
+    //rowBox[0].innerHTML += '<div class="simple-text">LOREM<br>IPSUM</div>'
+
+    for(i=0; i<30; i++) {
+        rowBox[0].innerHTML += '<div class="simple-text">LOREM<br>IPSUM</div>'
+/*
+        simpleText[i].style.left = (HX2 * i) + 'px';
+        simpleText[i].style.top = (HY2 * i) + 'px';
+*/ 
+    }
+    for(x=0; x<15; x++) {
+        simpleText[x].style.left = (preview_box_width/2) + (HX2 * x) + 'px';
+        simpleText[x].style.top = (preview_box_height/2) + (HY2 * x) + 'px';
+    }
+    for(y=15; y<30; y++) {
+        simpleText[y].style.left = (preview_box_width/2) - (HX2 * (y-14)) + 'px';
+        simpleText[y].style.top = (preview_box_height/2) - (HY2 * (y-14)) + 'px';
+    }
+    for(i=0; i<29; i++) {
+        var clone = rowBox[i].cloneNode(true);
+        preview_box.append(clone);
+     }
+    for(i=0; i<15; i++) {
+        rowBox[i].style.top = (preview_box_height/2) + vy_result * i + 'px';
+        rowBox[i].style.left = (preview_box_width/2) + vx_result * i + 'px';
+     }
+     for(i=15; i<30; i++) {
+        rowBox[i].style.top = (preview_box_height/2) - (vy_result * (i-14)) + 'px';
+        rowBox[i].style.left = (preview_box_width/2) - (vx_result * (i-14)) + 'px';
+     }
+}
+preview();
 // animate animClass
 var elem = document.getElementsByClassName("notif");
 function anim2() {
