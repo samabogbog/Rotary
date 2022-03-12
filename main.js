@@ -35,6 +35,8 @@ function calc2() {
     return HY2;
 }
 
+
+
 function calc4() {
     // Base value
     var wd = document.getElementById("width_input").value
@@ -43,8 +45,7 @@ function calc4() {
     var stepV = document.getElementById("stepV_input").value
     var unit = document.getElementById("unit_input").value
     var angle4 = document.getElementById("angle4_input").value
-    var HX4 = document.getElementById("hx4_result").innerText
-    var HY4 = document.getElementById("hy4_result").innerText
+    
     // calc HX
     var hxResult = wd / stepH
     document.getElementById("hx4_result").innerText = hxResult.toFixed(6)
@@ -125,22 +126,21 @@ function copyHY() {
 
 
             
-function preview() {
-    var preview_box = document.getElementById("preview_box");
-    var rowBox = document.getElementsByClassName('row-box');
-    var simpleText = document.getElementsByClassName('simple-text');
+function preview2() {
+    var preview_box = document.getElementById("preview_box2");
+    var rowBox = document.getElementsByClassName('row-box2');
+    var simpleText = document.getElementsByClassName('simple-text2');
     var vx_result = document.getElementById('vx_result').innerText
     var vy_result = document.getElementById('vy_result').innerText
-    var preview_box_width = document.getElementById('preview_box').offsetWidth;
-    var preview_box_height = document.getElementById('preview_box').offsetHeight;
+    var preview_box_width = document.getElementById('preview_box2').offsetWidth;
+    var preview_box_height = document.getElementById('preview_box2').offsetHeight;
 
-    
-    preview_box.innerHTML = '<div class="row-box"></div>';
+    preview_box.innerHTML = '<div class="row-box2"></div>';
 
     //rowBox[0].innerHTML += '<div class="simple-text">LOREM<br>IPSUM</div>'
 
     for(i=0; i<30; i++) {
-        rowBox[0].innerHTML += '<div class="simple-text">LOREM<br>IPSUM</div>'
+        rowBox[0].innerHTML += '<div class="simple-text2">LOREM<br>IPSUM</div>'
 /*
         simpleText[i].style.left = (HX2 * i) + 'px';
         simpleText[i].style.top = (HY2 * i) + 'px';
@@ -167,7 +167,56 @@ function preview() {
         rowBox[i].style.left = (preview_box_width/2) - (vx_result * (i-14)) + 'px';
      }
 }
-preview();
+preview2();
+
+function preview4() {
+    var preview_box4 = document.getElementById("preview_box4");
+    var rowBox4 = document.getElementsByClassName('row-box4');
+    var simpleText4 = document.getElementsByClassName('simple-text4');
+    var vx4_result = document.getElementById('vx4_result').innerText
+    var vy4_result = document.getElementById('vy4_result').innerText
+    var HX4 = document.getElementById("hx4_result").innerText
+    var HY4 = document.getElementById("hy4_result").innerText
+    var preview_box_width4 = document.getElementById('preview_box4').offsetWidth;
+    var preview_box_height4 = document.getElementById('preview_box4').offsetHeight;
+
+    preview_box4.innerHTML = '<div class="row-box4"></div>';
+
+    //rowBox[0].innerHTML += '<div class="simple-text">LOREM<br>IPSUM</div>'
+
+    for(i=0; i<30; i++) {
+        rowBox4[0].innerHTML += '<div class="simple-text4">LOREM<br>IPSUM</div>'
+/*
+        simpleText[i].style.left = (HX2 * i) + 'px';
+        simpleText[i].style.top = (HY2 * i) + 'px';
+*/ 
+    }
+    
+    for(x=0; x<15; x++) {
+        simpleText4[x].style.left = (preview_box_width4/2) + (HX4 * x) + 'px';
+        
+        simpleText4[x].style.top = (preview_box_height4/2) + (HY4 * x) + 'px';
+    }
+    for(y=15; y<30; y++) {
+        simpleText4[y].style.left = (preview_box_width4/2) - (HX4 * (y-14)) + 'px';
+        simpleText4[y].style.top = (preview_box_height4/2) - (HY4 * (y-14)) + 'px';
+    }
+
+    for(i=0; i<29; i++) {
+        var clone = rowBox4[i].cloneNode(true);
+        preview_box4.append(clone);
+     }
+    for(i=0; i<15; i++) {
+        rowBox4[i].style.top = (preview_box_height4/2) + vy4_result * i + 'px';
+        rowBox4[i].style.left = (preview_box_width4/2) + vx4_result * i + 'px';
+     }
+     for(i=15; i<30; i++) {
+        rowBox4[i].style.top = (preview_box_height4/2) - (vy4_result * (i-14)) + 'px';
+        rowBox4[i].style.left = (preview_box_width4/2) - (vx4_result * (i-14)) + 'px';
+     }
+
+}
+preview4();
 // animate animClass
 var elem = document.getElementsByClassName("notif");
 function anim2() {

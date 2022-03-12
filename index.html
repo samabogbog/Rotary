@@ -18,9 +18,9 @@
             <div class="frame">
                 <div class="title">TOP & BOTTOM</div>
 
-                <div id="preview_box">
-                    <div class="row-box">
-                        <div class="simple-text">LOREM<br>IPSUM</div>
+                <div id="preview_box2">
+                    <div class="row-box2">
+                        <div class="simple-text2">LOREM<br>IPSUM</div>
                     </div>
                 </div>
 
@@ -31,7 +31,7 @@
                         <div class="gridRoll">
                             <div class="rollSub">Roll (Value)</div>
                             <div class="rContent">
-                                <input id="roll_input" type="number" max="2000" min="1" value="0" step="1" oninput="calc2(); preview()"/>
+                                <input id="roll_input" type="number" max="2000" min="1" value="0" step="1" oninput="calc2(); preview2()"/>
                             </div>
                         </div>
                     </div>
@@ -39,13 +39,13 @@
                         <div class="gridCount">
                             <div class="angleSub">Angle (Count)</div>
                             <div class="rContent">
-                                <input id="angle2_input" type="number" max="100" min="-100" value="0" step="1" oninput="calc2(); preview()"/>
+                                <input id="angle2_input" type="number" max="50" min="-50" value="0" step="1" oninput="calc2(); preview2()"/>
                             </div>
                         </div>
                         <div class="gridCount">
                             <div class="stepSub">Step (Count)</div>
                             <div class="rContent">
-                                <input id="step_input" type="number" max="100" min="1" value="1" step="1" oninput="calc2(); preview()"/>
+                                <input id="step_input" type="number" max="100" min="1" value="1" step="1" oninput="calc2(); preview2()"/>
                             </div>
                         </div>
                     </div>
@@ -59,13 +59,13 @@
                     <div class="grid">
                         <div class="hSub">Horizontal X</div>
                         <div class="hContent">
-                            <input id="hx2_input" type="number" max="100" min="-100" value="0.0" step="0.5" oninput="calc2(); preview()"/>
+                            <input id="hx2_input" type="number" max="100" min="-100" value="0.0" step="0.5" oninput="calc2(); preview2()"/>
                         </div>
                     </div>
                     <div class="grid">
                         <div class="hSub">Horizontal Y</div>
                         <div class="hContent">
-                            <input id="hy2_input" type="number" max="100" min="-100" value="0.0" step="0.5" oninput="calc2(); preview()"/>
+                            <input id="hy2_input" type="number" max="100" min="-100" value="0.0" step="0.5" oninput="calc2(); preview2()"/>
                         </div>
                     </div>
                     
@@ -98,6 +98,13 @@
         <div class="col-2">
             <div class="frame">
                 <div class="title">AROUND</div>
+
+                <div id="preview_box4">
+                    <div class="row-box4">
+                        <div class="simple-text4">LOREM<br>IPSUM</div>
+                    </div>
+                </div>
+
                 <!-- Enter roll and angle -->
                 <div class="container">
         
@@ -105,7 +112,7 @@
                         <div class="gridRoll-4">
                             <div class="rollSub">Width</div>
                             <div class="rContent">
-                                <input id="width_input" type="number" max="2000" min="1" value="100" step="1" oninput="calc4()"/>
+                                <input id="width_input" type="number" max="2000" min="1" value="100" step="1" oninput="calc4(); preview4()"/>
                             </div>
                         </div>
                     </div>
@@ -113,36 +120,34 @@
                         <div class="gridRoll-4">
                             <div class="rollSub">Height</div>
                             <div class="rContent">
-                                <input id="height_input" type="number" max="2000" min="1" value="100" step="1" oninput="calc4()"/>
+                                <input id="height_input" type="number" max="2000" min="1" value="100" step="1" oninput="calc4(); preview4()"/>
                             </div>
                         </div>
                     </div>
         
-                    <div class="baseBox">
-                        <div class="gridCount">
+                    <div class="baseBox-100">
+                        <div class="gridCount-4">
                             <div class="stepSub">Step H</div>
                             <div class="rContent">
-                                <input id="stepH_input" type="number" max="100" min="1" value="2" step="1" oninput="calc4()"/>
+                                <input id="stepH_input" type="number" max="100" min="1" value="2" step="1" oninput="calc4(); preview4()"/>
                             </div>
                         </div>
-                        <div class="gridCount">
-                            <div class="angleSub">Angle</div>
-                            <div class="rContent">
-                                <input id="angle4_input" type="number" max="20" min="-20" value="0" step="1" oninput="calc4()"/>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="baseBox">
-                        <div class="gridCount">
+                        <div class="gridCount-4">
                             <div class="stepSub">Step V</div>
                             <div class="rContent">
-                                <input id="stepV_input" type="number" max="100" min="1" value="2" step="1" oninput="calc4()"/>
+                                <input id="stepV_input" type="number" max="100" min="1" value="2" step="1" oninput="calc4(); preview4()"/>
                             </div>
                         </div>
-                        <div class="gridCount">
+                        <div class="gridCount-4">
+                            <div class="angleSub">Angle</div>
+                            <div class="rContent">
+                                <input id="angle4_input" type="number" max="20" min="-20" value="0" step="1" oninput="calc4(); preview4()"/>
+                            </div>
+                        </div>
+                        <div class="gridCount-4">
                             <div class="stepSub">Unit</div>
                             <div class="rContent">
-                                <input id="unit_input" type="number" max="10" min="1" value="1" step="1" oninput="calc4()"/>
+                                <input id="unit_input" type="number" max="10" min="1" value="1" step="1" oninput="calc4(); preview4()"/>
                             </div>
                         </div>
                     </div>

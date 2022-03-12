@@ -1,6 +1,6 @@
 body {
     font-family: 'Outfit';
-    padding: 0;
+    padding: 0 0 20px;
     margin: 0;
     font-weight: 500;
     background: #f0f2f4;
@@ -10,7 +10,7 @@ body {
     flex-wrap: wrap;
     width: 100%;
     max-width: 960px;
-    min-width: 480px;
+    min-width: 380px;
     margin: auto;
 }
 .col-2 {
@@ -23,7 +23,7 @@ body {
     position: relative;
     width: 75%;
     height: 0px;
-    margin: 5px auto;
+    margin: 10px auto 5px;
     border-top: 2px dashed rgba(151, 91, 91, 0.2);
 }
 .line-md {
@@ -69,9 +69,18 @@ body {
 }
 .baseBox {
     display: block;
-    position: relative;
     width: 50%;
+    position: relative;
     overflow: hidden;
+    box-sizing: border-box;
+}
+
+.baseBox-100 {
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+    padding: 0  5px;
+    box-sizing: border-box;
 }
 .grid {
     display: block;
@@ -95,6 +104,17 @@ body {
     box-shadow: 0 1px 7px rgba(0, 0, 0, 0.1);
     overflow: hidden;
 }
+.gridCount-4 {
+    display: block;
+    position: relative;
+    width: calc(25% - 10px);
+    margin: 5px;
+    height: 55px;
+    background: #fff;
+    border-radius: 6px;
+    box-shadow: 0 1px 7px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
 .gridRoll, .gridRoll-4 {
     display: block;
     position: relative;
@@ -110,7 +130,7 @@ body {
 }
 .gridRoll-4 {
     height: 60px;
-    margin: 0px 10px 5px;
+    margin: 5px 10px;
 }
 .hSub, .vSub {
     display: flex;
@@ -249,7 +269,7 @@ body {
     box-shadow: 0 1px 5px rgba(0, 0, 0, 0.15);
     opacity: 0;
 }
-#preview_box {
+#preview_box2, #preview_box4 {
     position: relative;
     display: block;
     width: 100%;
@@ -261,18 +281,18 @@ body {
     border-radius: 6px;
     margin: 5px auto;
 }
-.simple-text {
+.simple-text2, .simple-text4 {
     display: block;
     position: absolute;
     font-size: 0.55em;
     font-weight: 900;
     line-height: 0.8em;
-    color: #111;
+    color: #222;
     transform: translate(-50%, -50%) rotate(-30deg);
     top: 50%;
     left: 50%;
 }
-.row-box {
+.row-box2, .row-box4 {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -309,7 +329,7 @@ body {
         top: -30px;
     }
 }
-@media screen and (max-width: 680px) {
+@media screen and (max-width: 720px) {
 .col-2 {
 width: 100%;
 padding: 10px;
